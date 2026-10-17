@@ -1,1 +1,1 @@
-# Sistema_de_informacoes_e_banco_de_dados
+Este repositório apresenta as resoluções de algumas tarefas em SQL passadas na disciplina "Sistema de informações e banco de dados" na Universidade Federal do Ceará do curso de bacharel em Estatística, da qual o presente autor obteve nota máxima.  
