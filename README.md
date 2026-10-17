@@ -5,10 +5,12 @@ O presente repositório reúne os códigos em SQL elaborados durante a disciplin
 
 </br>
 
-🌳*Ambiente:* PostgreSQL via [DB Fiddle](https://www.db-fiddle.com)
+## 🌳Ambiente:
+PostgreSQL via [DB Fiddle](https://www.db-fiddle.com)
 
 </br>
-📁*Estrutura do repositório:*
+
+## 📁Estrutura do repositório:
 - /Markdown: Resultados das consultas exportados em formato .md.
 - /Queries: Scripts com as resoluções em .sql.
 - /Schema: Código para criação das tabelas e inserção dos dados no banco.
