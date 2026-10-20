@@ -25,31 +25,30 @@ SELECT enome, salario
 from empregado, departamento
 WHERE cdep=codigo and dnome = 'marketing';
 
--- Recupere o CPF dos empregados que possuem alguma tarefa.
+-- recupere o CPF dos empregados que possuem alguma tarefa.
 SELECT DISTINCT e.cpf
 from empregado e, tarefas f
-where e.cpf = f.cpf
-8)
+where e.cpf = f.cpf;
+
 -- Recupere o CPF dos empregados que não possuem alguma tarefa.
 SELECT DISTINCT e.cpf
 from empregado e
-where e.cpf not in (SELECT f.cpf from tarefas f)
-9)
+where e.cpf not in (SELECT f.cpf from tarefas f);
+
 -- Recupere o nome dos empregados que possuem alguma tarefa. 
 select DISTINCT enome
 from empregado e, tarefas tf
 where e.cpf = tf.cpf;
 
 -- Recupere o nome dos empregados que não possuem tarefa.
-SELECT DISTINCT e.nome
+SELECT DISTINCT enome
 from empregado e
-where e.cpf not in (SELECT f.cpf from tarefas;
+where e.cpf not in (SELECT f.cpf from tarefas f);
 
 -- Recupre o CPF dos empregados que possuem pelo menos uma tarefa com mais de 30 horas.
 select e.cpf
 from empregado e, tarefas tf
 where e.cpf=tf.cpf and horas > 30;
-
 
 -- Recupre o nome dos empregados que possuem pelo menos uma tarefa com mais de 30 horas.
 select e.enome
