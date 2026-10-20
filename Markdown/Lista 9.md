@@ -1,8 +1,9 @@
 
 
-**Recupere o nome e o salário de todos os empregados
+**Recupere o nome e o salário de todos os empregados**
+    
     select enome, salario
-    FROM empregado**
+    FROM empregado
 
 | enome    | salario  |
 | -------- | -------- |
@@ -14,10 +15,11 @@
 | zefinha  | 10000.00 |
 
 ---
-**Recupere o nome e o salário de todos os empregados do sexo feminino.
+**Recupere o nome e o salário de todos os empregados do sexo feminino.**
+    
     select enome, salario
     FROM empregado
-    WHERE sexo = 'F'**
+    WHERE sexo = 'F'
 
 | enome    | salario  |
 | -------- | -------- |
@@ -27,6 +29,7 @@
 
 ---
 **Recupere o nome e o salário de todos os empregados do sexo feminino e que ganham salário maior que R$ 10.000,00.**
+
     select enome, salario
     FROM empregado
     WHERE sexo = 'F' and salario > 10000;
@@ -38,6 +41,7 @@
 
 ---
 **Recupere a quantidade de empregados.**
+
     select COUNT(*) as quantidade_empregados
     from empregado
 
