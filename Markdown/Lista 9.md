@@ -82,9 +82,7 @@
 | 8765 |
 
 ---
-**Query #8**
-
-    -- Recupere o CPF dos empregados que não possuem alguma tarefa.
+**Recupere o CPF dos empregados que não possuem alguma tarefa.**
     SELECT DISTINCT e.cpf
     from empregado e
     where e.cpf not in (SELECT f.cpf from tarefas f);
@@ -92,9 +90,7 @@
 There are no results to be displayed.
 
 ---
-**Query #9**
-
-    -- Recupere o nome dos empregados que possuem alguma tarefa. 
+**Recupere o nome dos empregados que possuem alguma tarefa.** 
     select DISTINCT enome
     from empregado e, tarefas tf
     where e.cpf = tf.cpf;
