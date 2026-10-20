@@ -46,9 +46,7 @@
 | 6                     |
 
 ---
-**Query #5**
-
-    -- Recupere o maior salário, o menor salário e a média salarial da empresa.
+**Recupere o maior salário, o menor salário e a média salarial da empresa.**
     select MAX(salario), min(salario), avg(salario)
     from empregado;
 
@@ -57,9 +55,7 @@
 | 15000.00 | 9000.00 | 11333.3333333333333333 |
 
 ---
-**Query #6**
-
-    -- Recupere o nome e o salário de todos os empregados que trabalham em Marketing 
+**Recupere o nome e o salário de todos os empregados que trabalham em Marketing** 
     SELECT enome, salario
     from empregado, departamento
     WHERE cdep=codigo and dnome = 'marketing';
@@ -71,9 +67,7 @@
 | zefinha  | 10000.00 |
 
 ---
-**Query #7**
-
-    -- recupere o CPF dos empregados que possuem alguma tarefa.
+**recupere o CPF dos empregados que possuem alguma tarefa.**
     SELECT DISTINCT e.cpf
     from empregado e, tarefas f
     where e.cpf = f.cpf;
