@@ -51,6 +51,7 @@
 
 ---
 **Recupere o maior salário, o menor salário e a média salarial da empresa.**
+    
     select MAX(salario), min(salario), avg(salario)
     from empregado;
 
@@ -60,6 +61,7 @@
 
 ---
 **Recupere o nome e o salário de todos os empregados que trabalham em Marketing** 
+    
     SELECT enome, salario
     from empregado, departamento
     WHERE cdep=codigo and dnome = 'marketing';
@@ -72,6 +74,7 @@
 
 ---
 **recupere o CPF dos empregados que possuem alguma tarefa.**
+    
     SELECT DISTINCT e.cpf
     from empregado e, tarefas f
     where e.cpf = f.cpf;
@@ -87,6 +90,7 @@
 
 ---
 **Recupere o CPF dos empregados que não possuem alguma tarefa.**
+    
     SELECT DISTINCT e.cpf
     from empregado e
     where e.cpf not in (SELECT f.cpf from tarefas f);
@@ -95,6 +99,7 @@ There are no results to be displayed.
 
 ---
 **Recupere o nome dos empregados que possuem alguma tarefa.** 
+    
     select DISTINCT enome
     from empregado e, tarefas tf
     where e.cpf = tf.cpf;
