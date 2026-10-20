@@ -253,5 +253,3 @@ There are no results to be displayed.
 | zulmira  | F    |
 
 ---
-
-[View on DB Fiddle](https://www.db-fiddle.com/)
