@@ -48,6 +48,7 @@ CREATE TABLE tarefas (
 cpf VARCHAR(4),
 pcodigo VARCHAR(10),
 horas INTEGER
+);
 INSERT INTO tarefas (cpf, pcodigo, horas)
 
 VALUES
@@ -74,5 +75,5 @@ VALUES
 (3, 'Prainha'),
 (3, 'Taiba'),
 (3, 'Icapui'),
-(4, 'Fortaleza')
+(4, 'Fortaleza');
 
