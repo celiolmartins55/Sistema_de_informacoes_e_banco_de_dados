@@ -124,9 +124,8 @@ There are no results to be displayed.
 There are no results to be displayed.
 
 ---
-**Query #11**
-
-    -- Recupre o CPF dos empregados que possuem pelo menos uma tarefa com mais de 30 horas.
+**Recupre o CPF dos empregados que possuem pelo menos uma tarefa com mais de 30 horas.**
+    
     select e.cpf
     from empregado e, tarefas tf
     where e.cpf=tf.cpf and horas > 30;
@@ -139,9 +138,8 @@ There are no results to be displayed.
 | 6543 |
 
 ---
-**Query #12**
-
-    -- Recupre o nome dos empregados que possuem pelo menos uma tarefa com mais de 30 horas.
+**Recupre o nome dos empregados que possuem pelo menos uma tarefa com mais de 30 horas.**
+    
     select e.enome
     from empregado e, tarefas tf
     where e.cpf=tf.cpf and horas > 30;
@@ -154,9 +152,8 @@ There are no results to be displayed.
 | zefinha  |
 
 ---
-**Query #13**
-
-    -- Recupere para cada departamento o seu nome e o nome do seu gerente
+**Recupere para cada departamento o seu nome e o nome do seu gerente**
+    
     select dnome, enome as gerente_nome
     from departamento d, empregado e 
     where cpf = gerente;
@@ -168,9 +165,8 @@ There are no results to be displayed.
 | administração | valtin       |
 
 ---
-**Query #14**
-
-    -- Recupere o CPF de todos os empregados que trabalham em Pesquisa ou que diretamente gerenciam um empregado que trabalha em Pesquisa.
+**Recupere o CPF de todos os empregados que trabalham em Pesquisa ou que diretamente gerenciam um empregado que trabalha em Pesquisa.**
+    
     select e.cpf
     FROM empregado e, departamento d 
     where (cdep=d.codigo and dnome= 'pesquisa') OR (cpf = gerente AND dnome='pesquisa');
@@ -181,9 +177,8 @@ There are no results to be displayed.
 | 3456 |
 
 ---
-**Query #15**
-
-    -- Recupere o nome e a cidade dos projetos que envolvem (contêm) pelo menos um empregado que trabalha mais de 30 horas nesse projeto.
+**Recupere o nome e a cidade dos projetos que envolvem (contêm) pelo menos um empregado que trabalha mais de 30 horas nesse projeto.**
+    
     SELECT DISTINCT pnome, cidade
     FROM projeto pp, tarefas tf
     WHERE pp.pcodigo = tf.pcodigo AND horas>30;
@@ -195,9 +190,8 @@ There are no results to be displayed.
 | ProdutoB       | Icapui       |
 
 ---
-**Query #16**
+**Recupere o nome e a data de nascimento dos gerentes de cada departamento.**
 
-    -- Recupere o nome e a data de nascimento dos gerentes de cada departamento. 
     SELECT enome, nasc
     FROM empregado e, departamento d
     where gerente=cpf;
@@ -209,9 +203,8 @@ There are no results to be displayed.
 | valtin  | 1965-05-05 |
 
 ---
-**Query #17**
+**Recupere o nome e o endereço de todos os empregados que trabalham para o departamento “Pesquisa”.**
 
-    --Recupere o nome e o endereço de todos os empregados que trabalham para o departamento “Pesquisa”.
     SELECT enome, endereco
     FROM empregado e, departamento d
     where cdep=d.codigo and dnome='pesquisa';
@@ -222,9 +215,8 @@ There are no results to be displayed.
 | zulmira | rua 5, 5 |
 
 ---
-**Query #18**
+**Para cada projeto localizado em Icapuí, recupere o código do projeto, o nome do departamento que o controla e o nome do seu gerente.**
 
-    -- Para cada projeto localizado em Icapuí, recupere o código do projeto, o nome do departamento que o controla e o nome do seu gerente.
     SELECT pcodigo, dnome, enome as gerente_nome
     from projeto pp, empregado e, departamento d
     where cidade='Icapui'  AND pp.cdep = d.codigo and gerente= cpf;
