@@ -234,9 +234,8 @@ There are no results to be displayed.
 | PB      | pesquisa | chiquin      |
 
 ---
-**Query #19**
+**Recupere o nome e o sexo dos empregados que são gerentes.**
 
-    -- Recupere o nome e o sexo dos empregados que são gerentes. 
     SELECT enome, sexo
     from empregado, departamento
     where cpf = gerente;
@@ -248,9 +247,8 @@ There are no results to be displayed.
 | valtin  | M    |
 
 ---
-**Query #20**
+**Recupere o nome e o sexo dos empregados que não são gerentes.**
 
-    -- Recupere o nome e o sexo dos empregados que não são gerentes. 
     SELECT enome, sexo
     from empregado
     where cpf not in (SELECT gerente from departamento)
