@@ -1,8 +1,7 @@
 
 
-**Query #1**
-
-    -- Recuperar o nome do departamento com maior média salarial
+**Recuperar o nome do departamento com maior média salarial**
+    
     select d.dnome 
     from empregado e, departamento d
     where d.codigo=e.cdep
@@ -14,9 +13,8 @@
 | administração |
 
 ---
-**Query #2**
-
-    -- Recuperar para cada departamento: o seu nome, o maior e o menor salário recebido  por empregados do departamento e a média salarial do departamento.
+**Recuperar para cada departamento: o seu nome, o maior e o menor salário recebido  por empregados do departamento e a média salarial do departamento.**
+    
     SELECT dnome, max(salario), MIN(salario), avg(salario)
     from departamento, empregado
     WHERE cdep=codigo
