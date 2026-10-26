@@ -262,9 +262,8 @@ There are no results to be displayed.
 There are no results to be displayed.
 
 ---
-**Query #16**
+**Recuperar o nome dos empregados com salário entre R$ 700 e R$ 2800**
 
-    -- Recuperar o nome dos empregados com salário entre R$ 700 e R$ 2800 
     SELECT enome
     FROM empregado
     WHERE salario BETWEEN 700 and 2800;
@@ -272,9 +271,8 @@ There are no results to be displayed.
 There are no results to be displayed.
 
 ---
-**Query #17**
+**Recuperar o nome dos departamentos que controlam projetos com mais de 50 empregados e que também controlam projetos com menos de 5 empregados.**
 
-    -- Recuperar o nome dos departamentos que controlam projetos com mais de 50 empregados e que também controlam projetos com menos de 5 empregados.
     SELECT d.dnome, COUNT(t.cpf)
     FROM departamento d 
     JOIN projeto p on d.codigo=p.cdep
