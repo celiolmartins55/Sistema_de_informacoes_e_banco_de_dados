@@ -27,9 +27,8 @@
 | administração | 15000.00 | 15000.00 | 15000.0000000000000000 |
 
 ---
-**Query #3**
+**Recuperar para cada departamento: o seu nome, o nome do seu gerente, a quantidade de empregados, a quantidade de projetos do departamento e a quantidade de unidades do departamento**
 
-    -- Recuperar para cada departamento: o seu nome, o nome do seu gerente, a quantidade de empregados, a quantidade de projetos do departamento e a quantidade de unidades do departamento
     SELECT 
         d.DNome AS nome_departamento,
     	ga.ENome AS nome_gerente,
@@ -58,9 +57,8 @@
 | pesquisa          | chiquin      | 2                     | 2             | 1        |
 
 ---
-**Query #4**
+**Recuperar o nome do projeto que consome o maior número de horas.**
 
-    -- Recuperar o nome do projeto que consome o maior número de horas.
     SELECT
         p.pnome AS projeto
     FROM
@@ -78,9 +76,8 @@
 | Divulgação |
 
 ---
-**Query #5**
-
-    -- Recuperar o nome do projeto mais caro.
+**Recuperar o nome do projeto mais caro.**
+    
     select p.pnome, SUM(salario) AS Maior_Salario
     from projeto p, empregado e
     where e.cdep = p.cdep
