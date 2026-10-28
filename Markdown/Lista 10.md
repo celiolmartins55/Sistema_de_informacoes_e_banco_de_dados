@@ -124,9 +124,8 @@
 | chiquin |
 
 ---
-**Query #8**
+**Recuperar o nome dos empregados que participam de projetos que não são gerenciados pelo seu departamento.**
 
-    -- Recuperar o nome dos empregados que participam de projetos que não são gerenciados pelo seu departamento. 
     SELECT DISTINCT e.enome, codigo, t.cpf, p.pcodigo
     from empregado e 
     INNER JOIN departamento d on e.cdep=d.codigo
