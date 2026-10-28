@@ -158,10 +158,8 @@
 There are no results to be displayed.
 
 ---
-**Query #10**
+**Recuperar para cada funcionário (empregado): o seu nome, o seu salário e o nomedo seu departamento. O resultado deve estar em  ordem decrescente de salário. Mostrar os empregados sem departamento e os departamentos sem empregados.**
 
-    -- Recuperar para cada funcionário (empregado): o seu nome, o seu salário e o nomedo seu departamento. O resultado deve estar em 
-    -- ordem decrescente de salário. Mostrar os empregados sem departamento e os departamentos sem empregados.
     SELECT e.enome, e.salario, d.dnome
     from empregado e
     FULL join departamento d on d.codigo=e.cdep
@@ -177,9 +175,8 @@ There are no results to be displayed.
 | valtin   | 15000.00 | administração |
 
 ---
-**Query #11**
+**Recuperar para cada funcionário (empregado): o seu nome, o nome do seu chefe e o nome do gerente do seu departamento.**
 
-    -- Recuperar para cada funcionário (empregado): o seu nome, o nome do seu chefe e o nome do gerente do seu departamento.
     SELECT DISTINCT e.enome, e2.enome as chefe, e3.enome as gerente
     FROM empregado e 
     left JOIN empregado e2 on e2.cpf=e.chefe
@@ -196,9 +193,8 @@ There are no results to be displayed.
 | zulmira  | valtin  | chiquin |
 
 ---
-**Query #12**
+**Listar nome dos departamentos com média salarial maior que a média salarial da empresa**
 
-    -- Listar nome dos departamentos com média salarial maior que a média salarial da empresa
     SELECT d.dnome, avg(salario)
     from departamento d, empregado e 
     WHERE e.cdep=d.codigo
@@ -210,9 +206,8 @@ There are no results to be displayed.
 | administração | 15000.0000000000000000 |
 
 ---
-**Query #13**
+**Listar todos os empregados que possuem salário maior que a média salarial de seus departamentos.**
 
-    -- Listar todos os empregados que possuem salário maior que a média salarial de seus departamentos.
     select e.enome AS nome_empregado
     from
     empregado e
