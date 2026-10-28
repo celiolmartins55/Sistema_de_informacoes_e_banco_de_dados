@@ -232,9 +232,8 @@ There are no results to be displayed.
 | helenita       |
 
 ---
-**Query #14**
-
-    -- Listar os empregados lotados nos departamentos localizados em “Fortaleza”. 
+**Listar os empregados lotados nos departamentos localizados em “Fortaleza”.** 
+    
     SELECT DISTINCT e.enome
     FROM empregado e
     join departamento d on d.codigo=e.cdep
