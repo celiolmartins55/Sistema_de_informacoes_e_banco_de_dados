@@ -90,9 +90,8 @@
 | Divulgação | 31000.00      |
 
 ---
-**Query #6**
+**Recuperar para cada projeto: o seu nome, o nome gerente do departamento que controla o projeto, a quantidade total de horas alocadas ao projeto, a quantidade de empregados alocados ao projeto e o custo mensal do projeto.**
 
-    -- Recuperar para cada projeto: o seu nome, o nome gerente do departamento que controla o projeto, a quantidade total de horas alocadas ao projeto, a quantidade de empregados alocados ao projeto e o custo mensal do projeto.
     SELECT p.pnome, e.enome as gerente, sum(t.horas) as qtde_horas, 
     COUNT (DISTINCT t.cpf) as qtde_empregados, sum(g.salario) as custo_mensal
     from projeto p
@@ -110,9 +109,8 @@
 | ProdutoB       | chiquin | 75         | 3               | 32000.00     |
 
 ---
-**Query #7**
+**Recupere o nome dos gerentes que estão alocados em algum projeto (ou seja, possuem “alguma” tarefa em “algum” projeto).**
 
-    -- Recupere o nome dos gerentes que estão alocados em algum projeto (ou seja, possuem “alguma” tarefa em “algum” projeto). 
     SELECT DISTINCT e.enome 
     from empregado e 
     INNER join departamento d on e.cpf = d.gerente
